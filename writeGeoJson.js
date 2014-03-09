@@ -32,7 +32,7 @@ var writeGeoJson = function(data) {
 			(function() {
 				if (currentLine.length) {
 					var writeString = '{"type": "Feature","properties": ' + JSON.stringify(currentProperties) + ',"geometry": {"type": "MultiLineString","coordinates":' + JSON.stringify(currentLine) +  '}}';
-					fs.outputJson(currentFile, writeString);
+					fs.outputJson(currentFile, JSON.parse(writeString));
 				}
 			}());
 		});

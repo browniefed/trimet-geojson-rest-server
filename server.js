@@ -19,7 +19,10 @@ var respondWithRoute = function(req, res, next) {
 		direction = req.params.direction;
 
 	fs.readFile('./routes/' + route + '/' + direction + '/route.geojson', {encoding: 'utf-8'}, function(err, data) {
-		res.json(JSON.parse(data));
+		if (err) {
+			res.send(404);
+		}
+		res.send(data);
 	});
 };
 
