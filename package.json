@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "restify": "^2.6.3",
+    "node-schedule": "^0.1.13",
+    "togeojson": "^0.7.0",
+    "jsdom": "^0.10.2",
+    "lodash": "^2.4.1",
+    "fs-extra": "^0.8.1"
+  }
+}
