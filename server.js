@@ -40,6 +40,6 @@ schedule.scheduleJob({hour: 23, minute: 0, dayOfWeek: [0, new schedule.Range(0, 
 });
 server.get('/route/:route/:direction', respondWithRoute);
 
-server.listen(8080, function() {
+server.listen(process.env.PORT || 5000, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
